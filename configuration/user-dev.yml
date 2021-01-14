@@ -1,0 +1,21 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yangdayangda/afterservice.git
+#          search-paths: yangda-config/
+          username: yangdayangda
+          password: 1154162893qwerty
+          default-label: master
+
+#      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
